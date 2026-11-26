@@ -22,5 +22,9 @@ Browser: signed in to the local demo, dashboard visibly rendered 60 ERP orders,
 bi_reader: no SELECT on raw_records/sales_facts, no INSERT on the mart
 API container: no default route; external TCP connect returned network unreachable
 
-Not executed: GitHub Actions workflow, real 1C or Bitrix24 connections.
+GitHub Actions: passed for code commit dac620a503f0e8f785ad0967702a3b901cab65fc
+Run: https://github.com/Lan1o/enterprise-bi-backend/actions/runs/45887270518
+CI included Ruff, 41 SQLite tests, local HTTP demo and 41 PostgreSQL tests.
+
+Not executed: real 1C or Bitrix24 connections.
 No real enterprise credentials or data were provided or used.
