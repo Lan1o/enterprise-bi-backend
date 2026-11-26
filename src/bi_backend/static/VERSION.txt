@@ -1,0 +1,4 @@
+Swagger UI Dist 5.36.0
+Source: https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-5.36.0.tgz
+Archive SHA1 verified against npm metadata: d5805b115efd5406d8d3987096fcf6b31519f590
+License: Apache-2.0; see LICENSE in this directory.

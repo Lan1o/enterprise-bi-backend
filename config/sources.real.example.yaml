@@ -1,0 +1,31 @@
+sources:
+  - id: onec_erp
+    kind: onec_odata
+    entity_type: sales_order
+    base_url_env: ONEC_ODATA_URL
+    username_env: ONEC_USER
+    password_env: ONEC_PASSWORD
+    entity_set: Document_ЗаказКлиента
+    source_timezone: Asia/Yekaterinburg
+    fields:
+      external_id: Ref_Key
+      title: Number
+      amount: СуммаДокумента
+      currency: CurrencyCode
+      status: Status
+      occurred_at: Date
+
+  - id: bitrix_crm
+    kind: bitrix24
+    entity_type: opportunity
+    base_url_env: BITRIX_WEBHOOK_URL
+    fields:
+      external_id: ID
+      title: TITLE
+      amount: OPPORTUNITY
+      currency: CURRENCY_ID
+      status: STAGE_ID
+      occurred_at: DATE_CREATE
+      updated_at: DATE_MODIFY
+      customer_id: COMPANY_ID
+      closed: CLOSED

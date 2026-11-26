@@ -1,0 +1,26 @@
+Local verification: 2026-11-27, Asia/Yekaterinburg
+
+Python: 3.12.14, Windows
+Databases checked: SQLite and PostgreSQL 17.12
+pytest: 41 passed on SQLite; 41 passed on a separate PostgreSQL test database
+ruff check: passed
+ruff format: passed
+HTTP demo: 60 ERP orders + 125 CRM opportunities = 185 current records
+Repeated ERP import: 185 current records, no duplicates
+Recommendations: 76 stale open opportunities on synthetic data
+Windows demo process cleanup: checked after fixing child process termination
+Credential generator: creates configuration, preserves existing .env
+Wheel packaging: checked inclusion of local Swagger assets and license
+Docker: image built, PostgreSQL migration applied, containers started
+Readiness: PostgreSQL TCP health check avoids temporary initialization-server race
+Networking: internal application/data network; separate loopback-only Nginx ingress
+API: reachable through http://localhost:8000
+Metabase: local demo account, read-only warehouse connection, 6 verified dashboard queries
+Metabase bootstrap: second run reused existing objects
+Browser: signed in to the local demo, dashboard visibly rendered 60 ERP orders,
+125 CRM opportunities, both charts and recommendation/summary tables
+bi_reader: no SELECT on raw_records/sales_facts, no INSERT on the mart
+API container: no default route; external TCP connect returned network unreachable
+
+Not executed: GitHub Actions workflow, real 1C or Bitrix24 connections.
+No real enterprise credentials or data were provided or used.

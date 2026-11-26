@@ -1,0 +1,34 @@
+sources:
+  - id: onec_demo
+    kind: onec_odata
+    entity_type: sales_order
+    base_url: http://127.0.0.1:8010/erp/odata/standard.odata/
+    entity_set: Document_SalesOrder
+    username_env: DEMO_1C_USER
+    password_env: DEMO_1C_PASSWORD
+    page_size: 20
+    fields:
+      external_id: Ref_Key
+      title: Number
+      amount: Amount
+      currency: CurrencyCode
+      status: Status
+      occurred_at: Date
+      updated_at: Modified
+      customer_id: Partner_Key
+
+  - id: bitrix_demo
+    kind: bitrix24
+    entity_type: opportunity
+    base_url: http://127.0.0.1:8010/bitrix/rest/1/demo/
+    fields:
+      external_id: ID
+      title: TITLE
+      amount: OPPORTUNITY
+      currency: CURRENCY_ID
+      status: STAGE_ID
+      occurred_at: DATE_CREATE
+      updated_at: DATE_MODIFY
+      customer_id: COMPANY_ID
+      closed: CLOSED
+    closed_statuses: [WON, LOSE]
